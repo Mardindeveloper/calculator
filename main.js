@@ -17,6 +17,9 @@ function showContent() {
         buttonOpen.style.display = 'none';
         buttonClose.style.display = 'block';
     }
+    // contentAdvance[0].style.display = (contentAdvance[0].style.display === 'block') ? 'none' : 'block'; 
+    // buttonOpen.style.display = (buttonOpen.style.display === 'none') ? 'block' : 'none'; 
+    // buttonClose.style.display = (buttonClose.style.display === 'block') ? 'none' : 'block'; 
 }
 
 buttonOpen.addEventListener('click', showContent);
