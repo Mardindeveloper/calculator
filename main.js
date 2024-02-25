@@ -71,5 +71,3 @@ function backSpace() {
     let result = displayResultElement.value.slice(0, -1);
     displayResultElement.value = result;
 }
-
-// console.log(contentAdvance.classList.contains('content-advance'));
