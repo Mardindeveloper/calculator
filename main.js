@@ -6,9 +6,17 @@ let buttonOpen = document.getElementById('showBoxButton');
 let buttonClose = document.getElementById('closeBoxButton');
 
 function showContent() {
-    contentAdvance[0].style.display = (contentAdvance[0].style.display === 'block') ? 'none' : 'block'; 
-    buttonOpen.style.display = (buttonOpen.style.display === 'none') ? 'block' : 'none'; 
-    buttonClose.style.display = (buttonClose.style.display === 'block') ? 'none' : 'block'; 
+    var computedStyle = window.getComputedStyle(contentAdvance[0]);
+
+    if (computedStyle.display === 'block') {
+        contentAdvance[0].style.display = 'none';
+        buttonOpen.style.display = 'block';
+        buttonClose.style.display = 'none';
+    } else {
+        contentAdvance[0].style.display = 'block';
+        buttonOpen.style.display = 'none';
+        buttonClose.style.display = 'block';
+    }
 }
 
 buttonOpen.addEventListener('click', showContent);
