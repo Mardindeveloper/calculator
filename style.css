@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #8D8987;
+}
+
+@keyframes appear {
+    0% { opacity: 0; } /* در ابتدا، عنصر مخفی است */
+    100% { opacity: 1; } /* در نهایت، عنصر نمایان می‌شود */
+}
+
+.container {
+    max-width: 80rem;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.show-content {
+    width: 40px;
+    height: 45px;
+    margin: 0;
+    background-color: #FF513C;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px 0 0 10px;
+}
+.disabled {
+    display: none;
+}
+
+.content-advance {
+    display: none;
+    animation: appear 1s ease-out;
+}
+
+.calculator {
+    background-color: #000000;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding-bottom: 15px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+}
+
+.displayResult {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.input-display {
+    width: 60px;
+    height: 60px;
+    color: #FFFFFF;
+    text-align: right;
+    border: unset;
+    background-color: unset;
+    flex: 1;
+    font-size: 45px;
+}
+
+.body {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.row {
+    display: flex;
+    margin: 10px;
+}
+
+.calculator form input,
+button {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    border: none;
+    border-radius: 60px;
+    font-size: 30px;
+    color: #FFFFFF;
+    margin: 5px 10px;
+    cursor: pointer;
+    background-color: unset;
+}
+
+input::placeholder {
+    color: #FFFFFF;
+}
+
+.display input {
+    text-align: right !important;
+    border-radius: unset;
+    background-color: unset;
+    flex: 1;
+    cursor: default;
+    font-size: 45px;
+}
+
+form #total {
+    background-color: #FF513C;
+    color: #fff;
+}
+
+form #clear,
+#backspace {
+    background-color: red;
+    color: #fff;
+    font-size: 24px;
+}

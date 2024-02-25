@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+</head>
+
+<body>
+    <div class="container">
+        <button id="showBoxButton" class="show-content">&#9664;</button>
+        <button id="closeBoxButton" class="show-content disabled">&#9654;</button>
+        <div class="calculator">
+            <section class="displayResult">
+                <input type="text" disabled name="displayResult" id="displayResult" placeholder="0"
+                    class="input-display">
+            </section>
+            <section class="body">
+                <div class="content">
+                    <form id="form">
+                        <div class="row">
+                            <input type="button" name="clear" value="C" id="clear" onclick="clearResult()">
+                            <input type="button" name="pow" value="^" onclick="mathCalculator('pow')">
+                            <input type="button" name="multiplication" value="*"
+                                onclick="addToCalculator(multiplication.value)">
+                            <input type="button" name="delete" value="DEL" id="backspace" onclick="backSpace()">
+                        </div>
+                        <div class="row">
+                            <input type="button" name="seven" value="7" onclick="addToCalculator(seven.value)">
+                            <input type="button" name="eight" value="8" onclick="addToCalculator(eight.value)">
+                            <input type="button" name="nine" value="9" onclick="addToCalculator(nine.value)">
+                            <input type="button" name="division" value="/" onclick="addToCalculator(division.value)">
+                        </div>
+                        <div class="row">
+                            <input type="button" name="four" value="4" onclick="addToCalculator(four.value)">
+                            <input type="button" name="five" value="5" onclick="addToCalculator(five.value)">
+                            <input type="button" name="six" value="6" onclick="addToCalculator(six.value)">
+                            <input type="button" name="minus" value="-" onclick="addToCalculator(minus.value)">
+                        </div>
+                        <div class="row">
+                            <input type="button" name="one" value="1" onclick="addToCalculator(one.value)">
+                            <input type="button" name="two" value="2" onclick="addToCalculator(two.value)">
+                            <input type="button" name="three" value="3" onclick="addToCalculator(three.value)">
+                            <input type="button" name="addition" value="+" onclick="addToCalculator(addition.value)">
+                        </div>
+                        <div class="row">
+                            <input type="button" name="twoZero" value="00" onclick="addToCalculator(twoZero.value)">
+                            <input type="button" name="zero" value="0" onclick="addToCalculator(zero.value)">
+                            <input type="button" name="comma" value="." onclick="addToCalculator(comma.value)">
+                            <input type="button" name="total" value="=" id="total" onclick="finalMath()">
+                        </div>
+                    </form>
+                </div>
+                <div class="content-advance">
+                    <form id="form">
+                        <div class="row">
+                            <input type="button" name="round" value="R" onclick="mathCalculator('round')">
+                            <input type="button" name="percent" value="%" onclick="calculatePercentage()">
+                        </div>
+                        <div class="row">
+                            <input type="button" name="ceil" value="Ce" onclick="mathCalculator('ceil')">
+                            <input type="button" name="floor" value="F" onclick="mathCalculator('floor')">
+                        </div>
+                        <div class="row">
+                            <input type="button" name="powTwo" value="x²" onclick="mathCalculator('powTwo')">
+                            <input type="button" name="powThree" value="x³" onclick="mathCalculator('powThree')">
+                        </div>
+                        <div class="row">
+                            <input type="button" name="sqrt" value="&radic;" onclick="mathCalculator('sqrt')">
+                            <input type="button" name="abs" value="|x|" onclick="mathCalculator('abs')">
+                        </div>
+                        <div class="row">
+                            <input type="button" name="openParentheses" value="(" onclick="addToCalculator(openParentheses.value)">
+                            <input type="button" name="closeParentheses" value=")" onclick="addToCalculator(closeParentheses.value)">
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
